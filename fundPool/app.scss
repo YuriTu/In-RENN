@@ -1,0 +1,37 @@
+/*
+* Author:Yuri 2016/09/05
+*/
+
+$WE_BG:#141618;
+$TABLE_BG:#202427;
+$FILTER_BG:#282E33;
+$NAV_BG:#374148;
+$TOOLBAR_BG:#56636B;
+
+$A:#6ea2e0;
+$A_HOVER:#9BC8FF;
+$FONT:#9EACBF;
+$FONT_HOVER_COLOR:#CED6E1;
+
+$BORDER:#616A76;
+$DIVIDING_LINE:#374148;
+
+$UP:#FC5858;
+$DOWN:#5BBF7E;
+
+
+$BO:1px solid $BORDER;
+
+$OW:680px;
+
+
+html{
+  //height:100%;
+}
+body{
+  background-color:$TABLE_BG;
+}
+.main-content{
+  height: 100%;
+  background-color:$TABLE_BG;
+}

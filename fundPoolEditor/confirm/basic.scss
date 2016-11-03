@@ -1,0 +1,64 @@
+$WE_BG:#141618;
+$TABLE_BG:#202427;
+$FILTER_BG:#282E33;
+$NAV_BG:#374148;
+$TOOLBAR_BG:#56636B;
+
+$A:#6ea2e0;
+$A_HOVER:#9BC8FF;
+$FONT:#9EACBF;
+$FONT_HOVER_COLOR:#CED6E1;
+
+$BORDER:#616A76;
+$DIVIDING_LINE:#374148;
+
+$UP:#FC5858;
+$DOWN:#5BBF7E;
+@mixin btn($w,$h,$c,$bc){
+  width: $w;
+  height: $h;
+  color: $c;
+  background-color: $bc;
+  line-height: $h;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.confirmDialog{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  .confirm{
+    width: 400px;
+    height: 230px;
+    padding: 0 30px 32px 30px;
+    background-color: $TABLE_BG;
+    text-align: center;
+    border-radius: 3px;
+    position: absolute;
+    left: 50%;
+    top:18%;
+    transform: transLateX(-50%);
+    .title{
+      line-height: 158px;
+      font-size: 16px;
+      font-weight: bolder;
+    }
+    .btn{
+      display: inline-block;
+    }
+    .btn-submit{
+      @include btn(160px,40px,#FFF,$UP);
+      margin-left: 20px;
+    }
+    .btn-cancel{
+      @include btn(160px,40px,#fff,$TOOLBAR_BG)
+    }
+  }
+}
