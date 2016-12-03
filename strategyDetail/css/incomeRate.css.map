@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,WAAW;EAIT,aAAa,EAAE,IAAI;EACnB,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,iBAAiB;EAChC,UAAU,EAAE,iBAAiB;EAN7B,wBAAY;IACV,aAAa,EAAE,IAAI;;AAQvB,UAAU;EACR,gBAAgB,EAAE,OAAO",
-"sources": ["../incomeRate/incomeRate.scss"],
-"names": [],
-"file": "incomeRate.css"
-}

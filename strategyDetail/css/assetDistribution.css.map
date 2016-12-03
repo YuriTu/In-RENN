@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAiBA,MAAM;EACJ,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,IAAI;EACnB,gBAAgB,EAlBP,OAAO;EAmBhB,MAAM,EAAE,iBAAiB",
-"sources": ["../assetDistribution/assetDistribution.scss"],
-"names": [],
-"file": "assetDistribution.css"
-}
