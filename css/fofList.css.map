@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;GAEG;AAED,kDAAoC;EAClC,KAAK,EAAE,IAAI;AAEb,gCAAkB;EAChB,WAAW,EAAE,IAAI;AAGjB,+CAAkB;EAChB,cAAc,EAAE,IAAI;;AAI1B,eAAe;EACb,QAAQ,EAAE,MAAM",
+"sources": ["../fofList/fofList.scss"],
+"names": [],
+"file": "fofList.css"
+}

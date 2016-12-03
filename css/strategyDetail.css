@@ -1,0 +1,22 @@
+/**
+ * Created by renren on 2016/11/10.
+ */
+.main-content {
+  overflow: hidden; }
+
+.strategyDetail-wrap {
+  padding-bottom: 20px; }
+  .strategyDetail-wrap .strategyDetail-left {
+    float: left;
+    width: 49.4%; }
+  .strategyDetail-wrap .strategyDetail-right {
+    float: right;
+    width: 49.4%; }
+
+.color-box {
+  display: inline-block;
+  margin-right: 8px;
+  margin-left: 25px;
+  vertical-align: middle; }
+
+/*# sourceMappingURL=strategyDetail.css.map */

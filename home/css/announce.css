@@ -1,0 +1,33 @@
+/**
+ * Created by Lever on 16/7/13.
+ */
+.dialog-body .react-slider {
+  margin-bottom: 20px; }
+  .dialog-body .react-slider .slider-item .content {
+    margin-top: 20px;
+    padding: 0 65px; }
+    .dialog-body .react-slider .slider-item .content a {
+      color: #fff; }
+    .dialog-body .react-slider .slider-item .content .announce-title {
+      font-size: 18px;
+      text-align: center;
+      font-weight: bolder;
+      margin-bottom: 25px; }
+    .dialog-body .react-slider .slider-item .content .announce-img {
+      margin-top: 20px; }
+      .dialog-body .react-slider .slider-item .content .announce-img img {
+        width: 100%; }
+  .dialog-body .react-slider .slider-arrow {
+    display: none; }
+  .dialog-body .react-slider .slider-dots-wrap {
+    box-sizing: border-box;
+    text-align: right;
+    padding-right: 30px; }
+    .dialog-body .react-slider .slider-dots-wrap .icon {
+      margin: 5px;
+      font-size: 12px;
+      cursor: pointer; }
+.dialog-body:hover .react-slider .slider-arrow {
+  display: inline-block; }
+
+/*# sourceMappingURL=announce.css.map */

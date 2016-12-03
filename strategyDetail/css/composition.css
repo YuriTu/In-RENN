@@ -1,0 +1,79 @@
+/**
+ * Created by Lever on 16/11/14.
+ */
+.composition {
+  width: 100%;
+  background-color: #292f33;
+  color: #fff;
+  border: 1px solid #5d6c78; }
+  .composition .title {
+    font-size: 14px;
+    padding: 15px 20px;
+    border-bottom: 1px solid #3f4448; }
+
+.pie-data-container {
+  overflow: hidden; }
+  .pie-data-container .pie-box {
+    float: left;
+    width: 215px;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 10px 15px; }
+    .pie-data-container .pie-box .pie-tooltip p {
+      max-width: 150px;
+      width: 140px;
+      word-break: break-all;
+      word-wrap: break-word;
+      white-space: pre-wrap; }
+  .pie-data-container .composition-list {
+    box-sizing: border-box;
+    padding: 30px 80px 30px 30px; }
+    .pie-data-container .composition-list li {
+      margin-bottom: 10px;
+      margin-left: 185px; }
+  .pie-data-container .color-box {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px; }
+  .pie-data-container span {
+    vertical-align: middle;
+    margin-right: 8px;
+    font-size: 12px;
+    color: #9eacbf;
+    font-weight: bolder; }
+  .pie-data-container .percent {
+    float: right;
+    line-height: 2em; }
+
+.relation .sub-title {
+  background-color: #252a2e;
+  padding: 12px 30px;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bolder; }
+  .relation .sub-title .relation-color {
+    float: right; }
+    .relation .sub-title .relation-color div {
+      display: inline-block; }
+    .relation .sub-title .relation-color .color-box {
+      width: 10px;
+      height: 2px; }
+    .relation .sub-title .relation-color .deep {
+      background-color: #78b1f6; }
+    .relation .sub-title .relation-color .light {
+      background-color: #5e686f; }
+    .relation .sub-title .relation-color span {
+      vertical-align: middle; }
+.relation .relation-chart {
+  width: 100%; }
+  .relation .relation-chart th, .relation .relation-chart td {
+    border: 1px solid #141618;
+    border-left: 0;
+    border-bottom: 0;
+    font-size: 12px;
+    color: #9eacbf;
+    text-align: center;
+    padding: 12px 0;
+    min-height: 85px; }
+
+/*# sourceMappingURL=composition.css.map */

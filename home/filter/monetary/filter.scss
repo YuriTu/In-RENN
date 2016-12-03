@@ -1,0 +1,134 @@
+$BG : #202427;
+$bottomPanelBG : #292f33;
+
+$BORDER : 1px solid #5d6c78;
+
+$FONT : #9eacbf;
+$TABLE_BG:#202427;
+$ACTIVE : #7ab4fa;
+@mixin clearfix{
+    *zoom: 1;
+    &:after {
+      content: " ";
+      display: block;
+      clear: both;
+    }
+}
+.filter-container{
+  border:$BORDER;
+  color: $FONT;
+  font-size: 12px;
+  background-color: #202427;
+  //所有分类
+  .f-resultlist{
+    position: relative;
+    border-bottom: $BORDER;
+    padding:10px 0px 20px 20px;
+    overflow: hidden;
+    .f-intro{
+      line-height: 33px;
+      float: left;
+      margin-top: 10px;
+
+    }
+    .f-rightBtn{
+      float: right;
+      margin-right: 8px;
+      height: 33px;
+      line-height: 33px;
+      margin-top: 10px;
+      .f-clearAll{
+        padding-right: 8px;
+        border-right: $BORDER;
+        margin-right: 10px;
+        color: #7ab4fa;
+        font-weight: bolder;
+      }
+      .f-dropdown{
+        color: #7ab4fa;
+        font-weight: bolder;
+      }
+      & i{
+        cursor: pointer;
+        //color:#fff;
+        font-size: 12px;
+        margin-left: 5px;
+      }
+
+    }
+    .filterItemList{
+      max-width: 75%;//两行的情况
+      display: inline-block;
+      .filterItem{
+        display: inline-block;
+        margin-left:20px;
+        margin-top: 10px;
+        div{
+          display: inline-block;
+          line-height: 30px;
+          border:$BORDER;
+          border-radius: 4px;
+          margin-right: 5px;
+          padding-left: 15px;
+          padding-right: 15px;
+          font-weight: bolder;
+          color: #ced6e1;
+          background-color: rgb(43, 47, 50);
+        }
+        i{
+          display: inline;
+        }
+      }
+    }
+  }
+  //一级项目面板
+  .f-filterlist{
+    padding: 20px 25px 0 20px;
+    &>div{
+      width: 100%;
+      //margin-bottom: 20px;
+      min-height: 35px;
+      @include  clearfix();
+    }
+  }
+  .f-open{
+    zoom:1;
+    position: relative;
+    & > div{
+      zoom:1;
+      position: relative;
+      //margin-bottom: 20px !important;
+      //margin-top: 20px !important;
+      min-height: 35px;
+    }
+  }
+  .f-openRightBtn{
+    margin-top: -13px;
+    margin-bottom: 10px;
+
+    & > a{
+      float: right;
+
+    }
+
+  }
+  //底部结果
+  .f-resultPanel{
+    line-height: 30px;
+    text-align: center;
+    background-color: $bottomPanelBG;
+    color: #c3cedb;
+    font-weight: bolder;
+    clear: both;
+  }
+}
+
+
+.f-intro{
+  color: #9eacbf;
+  font-weight: bolder;
+  float: left;
+}
+.none{
+  display: none !important;
+}

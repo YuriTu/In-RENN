@@ -1,0 +1,142 @@
+/**
+ * Created by Yuri on 16/11/14.
+ */
+
+$WE_BG:#141618;
+$TABLE_BG:#202427;
+$FILTER_BG:#282E33;
+$NAV_BG:#374148;
+$TOOLBAR_BG:#56636B;
+
+$A:#6ea2e0;
+$A_HOVER:#9BC8FF;
+$FONT:#9EACBF;
+$FONT_HOVER_COLOR:#CED6E1;
+
+$BORDER:#616A76;
+$DIVIDING_LINE:#374148;
+
+$UP:#FC5858;
+$DOWN:#5BBF7E;
+
+
+$BO:1px solid $BORDER;
+
+
+.basicInfo {
+  color: $FONT;
+
+  background-color: $FILTER_BG;
+
+  border-bottom: $BO;
+  margin-bottom: 10px;
+  ul {
+    height: 100px;
+    border-bottom: $BO;
+    padding: 0px 28px;
+    //padding-bottom: 0px\9;
+    li {
+      height: 45px;
+      width: (100%/6);
+      display: inline-block;
+      margin-top: 24px;
+      //margin-bottom: -15px\9;
+      .name {
+        font-size: 12px;
+        line-height: 18px;
+        text-indent: 20px;
+      }
+      .value {
+        font-family: Helvetica Neue;
+        font-size: 30px;
+        font-weight: bolder;
+        display: block;
+        .unit {
+          font-size: 12px;
+        }
+      }
+      .unit {
+        font-size: 12px;
+      }
+      .icon {
+        font-size: 8px;
+        font-size: 15px\9;
+      }
+      _:-ms-fullscreen, :root .icon {
+        font-size:15px;
+      }
+      .ieHack{
+        font-size: 15px;
+      }
+      .positive {
+        color: $UP;
+
+      }
+      .nagetive {
+        color: $DOWN;
+      }
+    }
+  }
+  .description {
+    padding: 20px;
+    line-height: 25px;
+    font-size: 12px;
+    .ellipsis {
+      font-size: 17px;
+      position: relative;
+      top:2px;
+
+    //}
+    //  display: inline-block;
+    //  cursor: pointer;
+    //  //vertical-align: bottom;
+    //  font-size: 15px;
+    //  line-height: 7px;
+    //  background-color:$NAV_BG;
+    //  height: 10px;
+    //  width: 25px;
+    //  text-indent: 5px;
+    //  border-radius: 3px;
+    //
+    //  position: relative;
+    //  border: 1px solid $DIVIDING_LINE;
+    //  &:hover{
+    //    color: $FONT_HOVER_COLOR;
+    //    background-color:$TOOLBAR_BG ;
+    //  }
+    //  //展开效果
+      &.showMore{
+        top:3px;
+        .icon-up-small{
+          position: relative;
+          top:2px;
+        }
+    //    line-height: 16px;
+    //    font-size: 11px;
+    //    position: relative;
+    //    top:3px;
+    //    text-indent: 4px;
+      }
+    //  //关闭效果
+    //  &.hideMore{
+    //    text-indent: 3px;
+    //    line-height: 7px;
+    //    position: relative;
+    //    top:-1px;
+    //  }
+      &.showIcon{
+        display: inline-block;
+      }
+      &.hideIcon{
+        display: none;
+      }
+    }
+  }
+}
+
+i.showIcon{
+  display: inline-block;
+}
+i.hideIcon{
+  display: none;
+}
