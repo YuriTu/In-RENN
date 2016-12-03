@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA;;GAEG;AACH,aAAa;EACX,QAAQ,EAAE,MAAM;;AAElB,oBAAoB;EAClB,cAAc,EAAE,IAAI;EACpB,yCAAoB;IAClB,KAAK,EAAE,IAAI;IACX,KAAK,EAAC,KAAK;EAEb,0CAAqB;IACnB,KAAK,EAAE,KAAK;IACZ,KAAK,EAAC,KAAK;;AAGf,UAAU;EACR,OAAO,EAAE,YAAY;EACrB,YAAY,EAAE,GAAG;EACjB,WAAW,EAAE,IAAI;EACjB,cAAc,EAAE,MAAM",
-"sources": ["../strategyDetail/strategyDetail.scss"],
-"names": [],
-"file": "strategyDetail.css"
-}
