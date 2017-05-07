@@ -11,7 +11,7 @@ fundPoolEditor: 基金池编辑功能
 
 fofList: 基金策略页
 
-strategyDetail: 基金策略详情页
+strategyDetail: 基金策略详情页 尝试使用了redux
 
 transactionAccount: 基金交易页
 
