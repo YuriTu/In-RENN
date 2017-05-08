@@ -9,6 +9,7 @@ const Animator = require("./animation");
 const Arc = require("./components/circular");
 const BasicHalo = require("./components/basicHalo");
 const basicUrl = "http://118.186.218.30/static";
+const _ = require("../../../common/christina");
 // workers 渲染逻辑 timer resizetime
 let ws, animator, rafTimer, timeout;
 // 动画当前动作的上一个动作的执行时间
@@ -45,6 +46,7 @@ class Main extends Component {
                 obj    : this.refs.screen,
                 width  : this.getWindowWidth(),
                 height : window.innerHeight - HEAD_HEIGHT,
+                // height : 1200,
                 ctx    : this.refs.screen.getContext("2d"),
                 allow  : false,
             };
@@ -67,7 +69,7 @@ class Main extends Component {
         this.initWorkers = () => {
             if (this.canUseWorkers()){
                 try {
-                    ws = new Worker(`${basicUrl}/halo-7de4c0.bundle.js`);
+                    ws = new Worker(`${basicUrl}/halo-1a683c.bundle.js`);
                 } catch (e){
                     console.error("Web worker script not found");
                 }
@@ -154,7 +156,7 @@ class Main extends Component {
                         break;
                 }
             }
-            rafTimer = window.requestAnimationFrame(this.animate);
+            rafTimer = _.raf()(this.animate);
         };
         this.baseOnTime = (time) => {
             const curTime = +new Date();
@@ -170,13 +172,13 @@ class Main extends Component {
             return passTime;
         };
         this.handleResize = () => {
-            window.addEventListener("resize", () => this.resize(), false);
+            window.addEventListener("resize", this.resize, false);
         };
         this.resize = () => {
             this.canvas.allow = false;
-            window.removeEventListener("resize", this.resize, false);
             window.clearTimeout(timeout);
             timeout = window.setTimeout(() => {
+                window.removeEventListener("resize", this.resize, false);
                 const screen = document.querySelector(".screen");
                 screen.width = `${this.getWindowWidth()}px`;
                 screen.height = `${window.innerHeight}px`;
@@ -184,7 +186,8 @@ class Main extends Component {
                 bg && bg.remove();
                 this.init();
                 this.start();
-            }, 200);
+                this.handleResize();
+            }, 500);
         };
     }
     componentDidMount(){

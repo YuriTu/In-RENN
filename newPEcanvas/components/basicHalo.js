@@ -16,7 +16,8 @@ class BasicHalo {
             this.stripeList.forEach((item) => {
                 ctx.beginPath();
                 // 左上
-                ctx.rect(this.initLB.x + 3, item.stepLB.y, 40, 10);
+                // 因为阴影与linwidth的原因，稍微有点右歪，进行1个像素修正
+                ctx.rect(this.initLB.x - 1, item.stepLB.y, 40, 10);
                 ctx.closePath();
                 ctx.fill();
                 item.stepLB.y -= 2;

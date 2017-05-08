@@ -3,6 +3,9 @@
 
 let ctx, canvas, offCtx, offCanvas;
 const _ = require("../../../common/christina");
+const MAX_WIDTH = 1200;
+const MAX_HEIGHT = 1200;
+const MAX_IMG_HEIGHT = 1600;
 class Animation {
     constructor(upper, off){
         canvas = { ...upper };
@@ -43,6 +46,18 @@ class Animation {
                 ctx.arc(x || this.center.x, y || this.center.y,
                     radius || 0, 0, Math.PI * 2, false);
             }
+        };
+        this.compClearHeight = () => {
+            if (canvas.height * 2 < MAX_HEIGHT){
+                return MAX_HEIGHT;
+            }
+            return canvas.height * 2;
+        };
+        this.compClearY = () => {
+            if (this.center.y <= MAX_HEIGHT / 2){
+                return -MAX_HEIGHT / 2;
+            }
+            return -this.center.y;
         };
     }
     init(config){
@@ -106,7 +121,7 @@ class Animation {
     thirdStep(config, textConfig){
         // 更改坐标轴为中心
         this.third.isTransAxis || (this.third.isTransAxis = this.transAxisCenter(ctx, this.center));
-        this.clearCanvas(-this.center.x, -this.center.y, canvas.width, canvas.height * 2);
+        this.clearCanvas(-this.center.x, this.compClearY(), canvas.width, this.compClearHeight());
         // 加载图片
         this.third.hasShowBG || (this.third.hasShowBG = this.showBG(config.haloRotateSpeed));
         this.rotateBG(config.haloRotateSpeed);
@@ -141,9 +156,7 @@ class Animation {
     initOffHalo(config){
         offCtx.fillStyle = config.fillStyle;
         offCtx.strokeStyle = config.stripeStyle;
-
         offCtx.lineWidth = config.lineWidth;
-
         offCtx.shadowColor = config.shadowColor;
         offCtx.shadowBlur = config.shadowBlur;
     }
@@ -162,9 +175,7 @@ class Animation {
         centerGradient.addColorStop(0.1, "rgba(32,148,148,0.95)");
         offCtx.beginPath();
         offCtx.arc(0, 0, config.radius, 0, Math.PI * 2, false);
-        // this.drawBasicCircle(config.radius, 0, 0);
         offCtx.fillStyle = centerGradient;
-        // offCtx.fillStyle = "#fff";
         offCtx.closePath();
         offCtx.fill();
         offCtx.restore();
@@ -181,7 +192,6 @@ class Animation {
         const data = offCanvas.obj.toDataURL();
         newImage.src = data;
         const ele = document.querySelector(".canvas");
-        // ele.style.background = `url(${data})`;
         container.appendChild(newImage);
         ele.appendChild(container);
     }
@@ -189,7 +199,7 @@ class Animation {
         const ele = document.querySelector(".canvas-bg");
         ele && (ele.style.display = "block");
         const container = document.querySelector(".canvas-bg-container");
-        container && (container.style.top = `-${600 - (canvas.height / 2)}px`);
+        container && (container.style.top = `${(canvas.height / 2) - (MAX_HEIGHT / 2)}px`);
         return true;
     }
     rotateBG(deg){
@@ -213,8 +223,8 @@ class Animation {
     }
     copyCanvasFormOff(){
         ctx.drawImage(offCanvas.obj,
-            0, 0, 1200, 1200,
-            -this.center.x, -this.center.y, 1200, 1200);
+            0, 0, MAX_WIDTH, MAX_HEIGHT,
+            -this.center.x, -this.center.y, MAX_WIDTH, MAX_HEIGHT);
     }
     initStripe(color){
         ctx.fillStyle = color;
@@ -241,7 +251,7 @@ class Animation {
     }
     createShadow(radiusPercentage, c){
         // 屏幕最小width 1200 620是为了在1200的情况下circle的阴影不要露出
-        const length = canvas.width <= 1200 ? 620 : canvas.width / 2;
+        const length = canvas.width <= MAX_WIDTH ? (MAX_WIDTH / 2 + 20) : canvas.width / 2;
         const gradient = c.createRadialGradient(
             0, 0, 1,
             0, 0, length

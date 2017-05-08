@@ -13,7 +13,7 @@ const init = {
 const basicConfig = {
     baseOnTime    : true,
     basicColor    : basicColor,
-    // 默认25毫秒一帧
+    // 默认25毫秒一帧FPS:40
     basicFps      : 25,
     firstTimeEnd  : 300,
     secondTimeEnd : 3000,

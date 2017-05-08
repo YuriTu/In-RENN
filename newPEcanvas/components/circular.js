@@ -14,9 +14,7 @@ class Circular {
         this.isChangeLength = false;
     }
     rotate(){
-        // if (this.maxAngle > this.startAngle){
         this.startAngle += this.stepAngle;
-        // }
     }
     change(){
         if (this.angleLength > this.maxAngleLength){
