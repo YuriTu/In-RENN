@@ -1,0 +1,60 @@
+$WE_BG:#141618;
+$TABLE_BG:#202427;
+$FILTER_BG:#282E33;
+$NAV_BG:#374148;
+$TOOLBAR_BG:#56636B;
+
+$A:#6ea2e0;
+$A_HOVER:#9BC8FF;
+$FONT:#9EACBF;
+$FONT_HOVER_COLOR:#CED6E1;
+
+$BORDER:#616A76;
+$DIVIDING_LINE:#374148;
+
+$UP:#FC5858;
+$DOWN:#5BBF7E;
+.red-form-container {
+  .container {
+    width: 520px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .container.success {
+    width: 400px;
+    padding-top: 170px;
+  }
+  .pull-left{
+    width: 36px;
+    height:36px;
+    border-radius: 50%;
+    background-color: $DOWN;
+
+    position: relative;
+
+    i{
+      //position: absolute;
+      //left: 25%;
+      color: #fff;
+      text-align: center;
+      line-height: 36px;
+      text-indent: 18px;
+      padding-left:33% ;
+
+      //transform: transLa/teX(-50%);
+    }
+  }
+  .pull-right{
+    float: left;
+    margin-left: 30px;
+    h4{
+      font-size: 14px;
+      color: $FONT_HOVER_COLOR;
+    }
+    P{
+      color: $FONT;
+      font-size: 12px;
+    }
+  }
+}
